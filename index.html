@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediSvara - Your Mental Health Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MediSvara</h2>
+                <span class="logo-accent">Mental Health Companion</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link auth-btn" onclick="showAuth('login')">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link signup-btn" onclick="showAuth('signup')">Sign Up</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your Mental Health Journey
+                    <span class="title-accent">Starts Here</span>
+                </h1>
+                <p class="hero-description">
+                    MediSvara is a safe space designed specifically for students to track emotions, 
+                    build healthy habits, and connect with support when you need it most.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showAuth('signup')">Get Started Free</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('features')">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-header">
+                        <div class="card-avatar"></div>
+                        <div class="card-info">
+                            <h4>Daily Check-in</h4>
+                            <p>How are you feeling today?</p>
+                        </div>
+                    </div>
+                    <div class="mood-indicators">
+                        <div class="mood-item active">😊</div>
+                        <div class="mood-item">😐</div>
+                        <div class="mood-item">😔</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Wellness Toolkit</h2>
+                <p class="section-subtitle">Everything you need for better mental health, all in one place</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" onclick="openDashboard('mood-tracker')">
+                    <div class="feature-icon">📊</div>
+                    <h3>Mood Tracker</h3>
+                    <p>Visualize your emotional patterns and recognize triggers with beautiful charts</p>
+                </div>
+                <div class="feature-card" onclick="openDashboard('breathing-timer')">
+                    <div class="feature-icon">🫁</div>
+                    <h3>Breathing Timer</h3>
+                    <p>Guided breathing exercises to reduce stress and anxiety in minutes</p>
+                </div>
+                <div class="feature-card" onclick="openDashboard('daily-checkin')">
+                    <div class="feature-icon">✅</div>
+                    <h3>Daily Check-in</h3>
+                    <p>Quick daily mood logging for self-reflection and emotional awareness</p>
+                </div>
+                <div class="feature-card" onclick="openDashboard('counselor')">
+                    <div class="feature-icon">👩‍⚕️</div>
+                    <h3>Get a Counsellor</h3>
+                    <p>Connect with certified mental health professionals when you need support</p>
+                </div>
+                <div class="feature-card" onclick="openDashboard('anonymous-chat')">
+                    <div class="feature-icon">💬</div>
+                    <h3>Anonymous Chat</h3>
+                    <p>Safe community space for peer support without identity pressure</p>
+                </div>
+                <div class="feature-card" onclick="openDashboard('profile')">
+                    <div class="feature-icon">👤</div>
+                    <h3>Profile Management</h3>
+                    <p>Personalize your experience and track your mental health journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About MediSvara</h2>
+                    <p class="about-description">
+                        Mental health challenges like stress, anxiety, and loneliness are increasingly common among 
+                        higher education students. Many struggle in silence due to lack of accessible support, 
+                        stigma, or busy academic schedules.
+                    </p>
+                    <p class="about-description">
+                        MediSvara bridges this gap by providing a student-centered, lightweight, and 
+                        community-driven platform that combines self-help tools with human connection 
+                        in one seamless experience.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>Students Helped</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Certified Counsellors</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Support Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image">
+                        <div class="wellness-icon">🧠</div>
+                        <h3>Mental Wellness for Students</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Students Say</h2>
+                <p class="section-subtitle">Real stories from students who found their path to better mental health</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"MediSvara helped me understand my anxiety patterns. The breathing exercises are a game-changer during exam stress."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Computer Science Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The anonymous chat feature made me feel less alone. Sometimes you just need to know others understand what you're going through."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Alex R.</h4>
+                            <p>Psychology Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Having access to professional counsellors through MediSvara made getting help so much easier and less intimidating."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maria L.</h4>
+                            <p>Business Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authentication Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="auth-title">Welcome Back</h2>
+                <span class="close" onclick="closeAuth()">&times;</span>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                <p class="auth-switch">
+                    Don't have an account? 
+                    <a href="#" onclick="switchAuth('signup')">Sign up here</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-university">University</label>
+                    <input type="text" id="signup-university" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <p class="auth-switch">
+                    Already have an account? 
+                    <a href="#" onclick="switchAuth('login')">Sign in here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <div class="dashboard-header">
+            <div class="dashboard-nav">
+                <h2>MediSvara Dashboard</h2>
+                <div class="user-info">
+                    <span id="user-name">Welcome back!</span>
+                    <button class="btn btn-secondary btn-sm" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Home -->
+        <div id="dashboard-home" class="dashboard-content active">
+            <div class="dashboard-grid">
+                <div class="dashboard-card" onclick="showDashboardSection('mood-tracker')">
+                    <div class="card-icon">📊</div>
+                    <h3>Mood Tracker</h3>
+                    <p>View your emotional patterns</p>
+                </div>
+                <div class="dashboard-card" onclick="showDashboardSection('breathing-timer')">
+                    <div class="card-icon">🫁</div>
+                    <h3>Breathing Timer</h3>
+                    <p>Start guided breathing exercise</p>
+                </div>
+                <div class="dashboard-card" onclick="showDashboardSection('daily-checkin')">
+                    <div class="card-icon">✅</div>
+                    <h3>Daily Check-in</h3>
+                    <p>Log how you're feeling today</p>
+                </div>
+                <div class="dashboard-card" onclick="showDashboardSection('counselor')">
+                    <div class="card-icon">👩‍⚕️</div>
+                    <h3>Get a Counsellor</h3>
+                    <p>Connect with professionals</p>
+                </div>
+                <div class="dashboard-card" onclick="showDashboardSection('anonymous-chat')">
+                    <div class="card-icon">💬</div>
+                    <h3>Anonymous Chat</h3>
+                    <p>Join peer support community</p>
+                </div>
+                <div class="dashboard-card" onclick="showDashboardSection('profile')">
+                    <div class="card-icon">👤</div>
+                    <h3>Edit Profile</h3>
+                    <p>Manage your information</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood Tracker Section -->
+        <div id="mood-tracker" class="dashboard-content">
+            <div class="section-header">
+                <h2>Mood Tracker</h2>
+                <button class="btn btn-secondary" onclick="showDashboardSection('dashboard-home')">← Back to Dashboard</button>
+            </div>
+            <div class="mood-tracker-container">
+                <div class="mood-entry">
+                    <h3>How are you feeling right now?</h3>
+                    <div class="mood-options">
+                        <button class="mood-btn" data-mood="5">😁</button>
+                        <button class="mood-btn" data-mood="4">😊</button>
+                        <button class="mood-btn" data-mood="3">😐</button>
+                        <button class="mood-btn" data-mood="2">😔</button>
+                        <button class="mood-btn" data-mood="1">😢</button>
+                    </div>
+                    <button class="btn btn-primary" onclick="logMood()">Log Mood</button>
+                </div>
+                <div class="mood-chart">
+                    <h3>Your Mood History</h3>
+                    <canvas id="mood-chart-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breathing Timer Section -->
+        <div id="breathing-timer" class="dashboard-content">
+            <div class="section-header">
+                <h2>Breathing Timer</h2>
+                <button class="btn btn-secondary" onclick="showDashboardSection('dashboard-home')">← Back to Dashboard</button>
+            </div>
+            <div class="breathing-container">
+                <div class="breathing-circle" id="breathing-circle">
+                    <div class="breathing-text" id="breathing-text">Click Start</div>
+                </div>
+                <div class="breathing-controls">
+                    <button class="btn btn-primary" id="start-breathing" onclick="startBreathing()">Start Exercise</button>
+                    <button class="btn btn-secondary" id="stop-breathing" onclick="stopBreathing()" style="display: none;">Stop</button>
+                </div>
+                <div class="breathing-timer-display" id="timer-display">00:00</div>
+            </div>
+        </div>
+
+        <!-- Daily Check-in Section -->
+        <div id="daily-checkin" class="dashboard-content">
+            <div class="section-header">
+                <h2>Daily Check-in</h2>
+                <button class="btn btn-secondary" onclick="showDashboardSection('dashboard-home')">← Back to Dashboard</button>
+            </div>
+            <div class="checkin-container">
+                <div class="checkin-form">
+                    <div class="form-group">
+                        <label>How was your day overall?</label>
+                        <div class="rating-scale">
+                            <button class="rating-btn" data-rating="1">1</button>
+                            <button class="rating-btn" data-rating="2">2</button>
+                            <button class="rating-btn" data-rating="3">3</button>
+                            <button class="rating-btn" data-rating="4">4</button>
+                            <button class="rating-btn" data-rating="5">5</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>What were your main emotions today?</label>
+                        <div class="emotion-tags">
+                            <button class="emotion-tag">Happy</button>
+                            <button class="emotion-tag">Stressed</button>
+                            <button class="emotion-tag">Anxious</button>
+                            <button class="emotion-tag">Calm</button>
+                            <button class="emotion-tag">Excited</button>
+                            <button class="emotion-tag">Overwhelmed</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Any thoughts you'd like to note?</label>
+                        <textarea id="daily-notes" placeholder="Optional reflection..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="saveCheckin()">Save Check-in</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other dashboard sections (counselor, chat, profile) would be implemented similarly -->
+        <div id="counselor" class="dashboard-content">
+            <div class="section-header">
+                <h2>Get a Counsellor</h2>
+                <button class="btn btn-secondary" onclick="showDashboardSection('dashboard-home')">← Back to Dashboard</button>
+            </div>
+            <div class="counselor-container">
+                <div class="counselor-grid">
+                    <div class="counselor-card">
+                        <div class="counselor-avatar">Dr. S</div>
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Anxiety & Stress Specialist</p>
+                        <div class="counselor-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <button class="btn btn-primary">Book Session</button>
+                    </div>
+                    <div class="counselor-card">
+                        <div class="counselor-avatar">Dr. M</div>
+                        <h3>Dr. Michael Chen</h3>
+                        <p>Student Mental Health Expert</p>
+                        <div class="counselor-rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <button class="btn btn-primary">Book Session</button>
+                    </div>
+                    <div class="counselor-card">
+                        <div class="counselor-avatar">Dr. E</div>
+                        <h3>Dr. Emily Davis</h3>
+                        <p>Depression & Mood Disorders</p>
+                        <div class="counselor-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <button class="btn btn-primary">Book Session</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="anonymous-chat" class="dashboard-content">
+            <div class="section-header">
+                <h2>Anonymous Chat</h2>
+                <button class="btn btn-secondary" onclick="showDashboardSection('dashboard-home')">← Back to Dashboard</button>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-message">
+                        <div class="message-avatar">A</div>
+                        <div class="message-content">
+                            <p>Starting university has been overwhelming. Anyone else feeling the same?</p>
+                            <span class="message-time">2 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="chat-message">
+                        <div class="message-avatar">B</div>
+                        <div class="message-content">
+                            <p>You're not alone! The first semester is always tough. It gets better.</p>
+                            <span class="message-time">1 minute ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input-field" placeholder="Share your thoughts anonymously...">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile" class="dashboard-content">
+            <div class="section-header">
+                <h2>Edit Profile</h2>
+                <button class="btn btn-secondary" onclick="showDashboardSection('dashboard-home')">← Back to Dashboard</button>
+            </div>
+            <div class="profile-container">
+                <div class="profile-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="profile-name" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="profile-email" value="john@university.edu">
+                    </div>
+                    <div class="form-group">
+                        <label>University</label>
+                        <input type="text" id="profile-university" value="State University">
+                    </div>
+                    <div class="form-group">
+                        <label>Year of Study</label>
+                        <select id="profile-year">
+                            <option>First Year</option>
+                            <option>Second Year</option>
+                            <option>Third Year</option>
+                            <option>Fourth Year</option>
+                            <option>Graduate</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" onclick="saveProfile()">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MediSvara</h3>
+                    <p>Your mental health companion for a better student life.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediSvara. All rights reserved. Made with ❤️ for student wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/auth.js"></script>
+    <script src="src/js/dashboard.js"></script>
+    <script src="src/js/mood-tracker.js"></script>
+    <script src="src/js/breathing-timer.js"></script>
+</body>
+</html>
